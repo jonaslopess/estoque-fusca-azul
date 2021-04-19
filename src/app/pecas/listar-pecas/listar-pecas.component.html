@@ -1,0 +1,13 @@
+<div class="list-group">
+    <a class="list-group-item" >
+        <a *ngFor="let peca of pecas"
+        [ngClass]="{
+            'list-orange': peca.getAlert() == 3,'list-red': peca.getAlert() == 2,'list-normal': peca.getAlert() == 1
+        }" [routerLink]="['/editar', peca.getCod]">
+            ({{peca.getCod}}) {{peca.getDescricao}}: 
+            {{peca.getQuantidadeDisponivel}}/{{peca.getCapacidadeMaxima}} 
+            (min. {{peca.getQuantidadeMinima}})
+            <br>
+        </a>
+    </a>
+</div>

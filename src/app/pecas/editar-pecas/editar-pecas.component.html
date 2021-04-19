@@ -1,0 +1,30 @@
+<div class="list-group">
+
+    <p class="list-normal">
+        ({{peca?.getCod}}) {{peca?.getDescricao}}
+    </p>
+    <p [ngClass]="{
+        'list-orange': alert == 3,'list-red': alert == 2,'list-normal': alert == 1
+    }">
+        Quantidade disponível: {{peca?.getQuantidadeDisponivel}}
+    </p>
+    <p class="list-normal">
+        Capacidade máxima: {{peca?.getCapacidadeMaxima}}
+    </p>
+    <p class="list-normal">
+        Quantidade mínima necessária: {{peca?.getQuantidadeMinima}}
+    </p>
+    <br>
+
+    <div class="quantidade">
+        
+        <label for="quantidade">Insira a quantidade para atualizar o estoque: </label>
+        <br>
+        <input type="number" id="quantidade" name="quantidade" [(ngModel)]="quantidade" required>
+        <br>
+        <button (click)="atualizarQuantidade(1)">(+) Adicionar</button>
+        <button (click)="atualizarQuantidade(-1)">(-) Remover</button>
+
+    </div>
+
+</div>

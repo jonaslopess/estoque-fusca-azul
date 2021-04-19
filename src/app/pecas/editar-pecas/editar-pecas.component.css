@@ -1,0 +1,43 @@
+.list-group{
+    margin-top: 14px;
+    margin-left: 30px;
+    padding: 15px;
+    background: #C4C4C4;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.list-red{
+    color: #FF0000;
+}
+.list-orange{
+    color: #FF7A00;
+}
+.list-normal{
+    color: #000000;
+}
+
+.quantidade{
+    width: 400px;
+}
+
+.quantidade input{
+    width: 98%;
+    margin: 5px;
+}
+
+.quantidade button{
+    width: 48.5%;
+    margin-top: 5px;
+    margin-left: 6px;
+    
+    background: #717171;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}

@@ -30,7 +30,6 @@ export class EditarPecasComponent implements OnInit {
 			(params) => {
 				this.cod = params['cod'];
 				this.peca = this.pecaService.getPeca(this.cod);
-        console.log(this.cod +" "+ this.peca?.getDescricao)
 				if(this.peca == null){
 					this.router.navigate(['']);
 				}
@@ -41,7 +40,6 @@ export class EditarPecasComponent implements OnInit {
   }
 
   atualizarQuantidade(op: number){
-    console.log(this.quantidade+" "+typeof(this.quantidade))
     op = Number(op)
     if (this.peca){
       this.pecaService.atualizaQuantidadePeca(this.peca.getCod, op*this.quantidade)

@@ -1,0 +1,51 @@
+<div class="list-group">
+    
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="form-item">
+            <div class="col-25">
+                <label for="codigo">Código: </label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="codigo" name="codigo" [(ngModel)]="codigo" required>
+            </div>
+        </div>
+        <div class="form-item">
+            <div class="col-25">
+                <label for="descricao">Descrição: </label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="descricao" name="descricao" [(ngModel)]="descricao" required>
+            </div>
+        </div>
+        <div class="form-item">
+            <div class="col-40">
+                <label for="quantidade">Quantidade Disponível: </label>
+            </div>
+            <div class="col-60">
+                <input type="number" id="quantidade" name="quantidade" [(ngModel)]="quantidade" required>
+            </div>
+        </div>
+        <div class="form-item">
+            <div class="col-40">
+                <label for="quantidadeMin">Quantidade mínima: </label>
+            </div>
+            <div class="col-60">
+                <input type="number" id="quantidadeMin" name="quantidadeMin" [(ngModel)]="quantidadeMin" required>
+            </div>
+        </div>
+        <div class="form-item">
+            <div class="col-40">
+                <label for="capacidade">Capacidade máxima: </label>
+            </div>
+            <div class="col-60">
+                <input type="number" id="capacidade" name="capacidade" [(ngModel)]="capacidade" required>
+            </div>
+        </div>
+        <div class="form-item">
+            <div class="nova">
+                <button type='submit'>Cadastrar</button>
+            </div>
+        </div>
+    </form>
+
+</div>

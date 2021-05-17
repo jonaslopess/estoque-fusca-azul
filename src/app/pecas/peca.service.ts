@@ -45,6 +45,10 @@ export class PecaService {
     }
   }
 
+  public addPeca(cod : string, desc : string, quantidade : number, capacidade : number, quantidadeMin : number){
+    this.pecas.push(new Peca(cod,desc,quantidade,quantidadeMin,capacidade))
+  }
+
   private ordenar(arr: Peca[]){
     arr.sort((a, b) => (
       a.getQuantidadeDisponivel/a.getQuantidadeMinima < 
